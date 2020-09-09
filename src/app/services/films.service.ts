@@ -22,9 +22,9 @@ export class FilmsService {
 
   filmes:Film[]
 
-  getFilmsService(): Observable<any>{
+  /*getFilmsService(): Observable<any>{
     return this.httpClient.get(this.url+"x-men"+this.apikey )
-  }
+  }*/
 
   getSearchFilmeService(movieName){
     return this.httpClient.get<Film[]>(`https://www.omdbapi.com/?s=${movieName}&apikey=e03a9ac8`)

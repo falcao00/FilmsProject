@@ -15,7 +15,7 @@ export class SeachBarComponent implements OnInit {
 
 
   ngOnInit() {
-    this.searchMovie(null);
+    this.searchMovie("iron")
   }
 
 

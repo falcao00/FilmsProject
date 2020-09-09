@@ -11,18 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilmPlaceholdComponent implements OnInit {
 
-  public serviceFilms2;
-  public filme: Film[];
+  /*public serviceFilms2;
+  public filme: Film[];*/
 
   constructor(
     private serviceFilms: FilmsService
   ) { }
 
   ngOnInit() {
-    this.getFilms();
   }
 
-  getFilms(){
+  /*getFilms(){
     this.serviceFilms.getFilmsService().subscribe(
       (data) => {
         //console.log(data);
@@ -30,6 +29,6 @@ export class FilmPlaceholdComponent implements OnInit {
         console.log(this.filme);
       }
     )
-  }
+  }*/
 
 }
