@@ -2,6 +2,8 @@ import { Film } from './../models/films';
 import { FilmsService } from './../services/films.service';
 import { Component, OnInit } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-film-placehold',
   templateUrl: './film-placehold.component.html',
@@ -9,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilmPlaceholdComponent implements OnInit {
 
+  public serviceFilms2;
 
   constructor(
     private serviceFilms: FilmsService
@@ -22,8 +25,8 @@ export class FilmPlaceholdComponent implements OnInit {
     this.serviceFilms.getFilmsService().subscribe(
       (data) => {
         //console.log(data);
-        this.serviceFilms.filmes = data //as Film[]
-        console.log(this.serviceFilms.filmes)
+        this.serviceFilms2 = data //as Film[]
+        console.log(this.serviceFilms2)
       }
     )
   }
