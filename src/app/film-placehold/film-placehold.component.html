@@ -1,7 +1,9 @@
 <div class="box">
-  <div class="container">
-    <li *ngFor="let filme of serviceFilms2.Search">
-        {{filme.Title}}
-    </li>
+  <div>
+    <div *ngFor="let filme of filme" class="innerbox">
+      <h4><span class="movieName">{{filme.Title}}</span></h4>
+      <img src="{{filme.Poster}}>" class="poster">
+      <h4><span class="year">({{filme.Year}})</span></h4>
+    </div> 
   </div>
 </div>
