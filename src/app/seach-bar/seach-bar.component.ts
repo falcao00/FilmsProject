@@ -1,5 +1,6 @@
 import { FilmsService } from './../services/films.service';
 import { Component, OnInit } from '@angular/core';
+import { Film } from '../models/films';
 
 @Component({
   selector: 'app-seach-bar',
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeachBarComponent implements OnInit {
 
+  public filmSeachBar:Film[];
+
   constructor(private serviceFilms: FilmsService) { }
 
+
   ngOnInit() {
+    this.searchMovie(null);
   }
 
 
@@ -18,9 +23,20 @@ export class SeachBarComponent implements OnInit {
     console.log(movieTitle);
     return this.serviceFilms.getSearchFilmeService(movieTitle).subscribe(
       data => {
-        console.log(data);
+        this.filmSeachBar = data["Search"];
+        console.log(this.filmSeachBar);
       }
     )
+  }
+
+  refesh(){
+    window.location.reload();
+  }
+
+  searchMovie(movieTitle){
+
+    return this.buscarFilme(movieTitle);
+
   }
 
 }

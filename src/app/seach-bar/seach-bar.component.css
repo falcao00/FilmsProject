@@ -3,3 +3,35 @@
     position: relative;
     bottom: -30px;
 }
+
+.box{
+    border: 1px solid red;
+    /*position: relative;*/
+    position: relative;
+    bottom: -150px;
+
+ }
+
+/* .movieName{
+    border: 1px solid red; 
+    /*position: relative;
+    left: 370px;
+ }
+ .year{
+    border: 1px solid red; 
+    /*position: relative;
+    bottom: -5px
+ }
+
+ .poster{
+    border: 1px solid red; 
+    /*position: relative;
+    left: 365px;
+    padding: 10px;
+ }*/
+
+ .innerbox{
+     border: 1px solid red;
+     place-content: center;
+     padding: 20px;
+ }

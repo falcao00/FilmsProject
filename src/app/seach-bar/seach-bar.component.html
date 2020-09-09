@@ -2,7 +2,17 @@
   <div class="input-group mb-3">
     <input type="text" class="form-control" placeholder="Nome do Filme" aria-describedby="basic-addon2" #movieTitle>
     <div class="input-group-prepend">
-      <button class="btn btn-outline-secondary" type="button" placeholder="digite" (click)="buscarFilme(movieTitle.value)">Pesquisar</button>
+      <button class="btn btn-outline-secondary" type="button" placeholder="digite" (click)="searchMovie(movieTitle.value)">Pesquisar</button>
     </div>
+  </div>
+</div>
+
+<div class="box">
+  <div>
+    <div *ngFor="let filme of filmSeachBar" class="innerbox">
+      <h4><span class="movieName">{{filme.Title}}</span></h4>
+      <img src="{{filme.Poster}}>" class="poster">
+      <h4><span class="year">({{filme.Year}})</span></h4>
+    </div> 
   </div>
 </div>

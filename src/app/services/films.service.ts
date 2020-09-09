@@ -9,7 +9,8 @@ import {Observable} from "rxjs";
 export class FilmsService {
 
 
-  url='https://www.omdbapi.com/?s=x-men&apikey=e03a9ac8'; //rest api
+  url='https://www.omdbapi.com/?s='; //rest api
+  apikey = "&apikey=e03a9ac8";
 
   constructor(
     private httpClient:HttpClient
@@ -22,7 +23,7 @@ export class FilmsService {
   filmes:Film[]
 
   getFilmsService(): Observable<any>{
-    return this.httpClient.get(this.url)
+    return this.httpClient.get(this.url+"x-men"+this.apikey )
   }
 
   getSearchFilmeService(movieName){
