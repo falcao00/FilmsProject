@@ -1,0 +1,31 @@
+.container{
+    border: 1px solid red;
+    bottom: -250px;
+    width: 300px;
+    padding: 50px;
+    margin: 20px;
+ }
+ 
+ .box{
+    border: 1px solid red;
+    display: flex;
+    position: relative; 
+    bottom: -250px;  
+    justify-content: center;
+ }
+
+ .movieName{
+     position: relative;
+     top: -40px;
+     left: 45px;
+ }
+ .year{
+     position: relative;
+     bottom: -50px;
+     left: 45px;
+ }
+
+ .poster{
+    left: 45px;
+    position: relative;
+ }
